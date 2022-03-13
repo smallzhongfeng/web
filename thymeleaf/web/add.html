@@ -1,0 +1,45 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+<!--    <script language="JavaScript" src="js/index.js"></script>-->
+</head>
+<body>
+<div id="div_container">
+    <div id="div_fruit_list">
+        <p class="center f30">编辑库存信息 add2</p>
+        <!--action就是点击submit之后，触发的servlet，也就是触发了add的组件
+            add.html对应的组件就是addServlet，然后由于是input标签，所以可以在框框里面写数据，点击submit之后相当于是封装成一个请求
+            这个时候主要是调用了addServlet里面的方法，发送到数据库
+        -->
+        <form action="fruit.do" method="post">
+<!--            这个隐藏的插件还是可以的-->
+            <input type="hidden" name="operate" value="add"/>
+            <table id="tbl_fruit">
+                <tr>
+                    <th class="w20">名称：</th>
+                    <td><input type="text" name="fname"/></td>
+                </tr>
+                <tr>
+                    <th class="w20">单价：</th>
+                    <td><input type="text"  name="price"/></td>
+                </tr>
+                <tr>
+                    <th class="w20">库存：</th>
+                    <td><input type="text" name="fcount"/></td>
+                </tr>
+                <tr>
+                    <th class="w20">备注：</th>
+                    <td><input type="text" name="remark"/></td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="submit" value="提交" />
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

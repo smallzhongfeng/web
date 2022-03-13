@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="dispatcher:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/dispatcher_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="dispatcher" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib_mysql5" />
+          <element id="library" level="project" name="lib_thymeleaf" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="dispatcher/web/Web" />
+    </root>
+  </artifact>
+</component>
